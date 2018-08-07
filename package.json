@@ -1,0 +1,19 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "BROWSER=none umi dev",
+    "build": "BROWSER=none umi build"
+  },
+  "dependencies": {
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "umi": "^1.3.16"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6"
+  }
+}
