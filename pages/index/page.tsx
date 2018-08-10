@@ -24,7 +24,12 @@ class index extends React.Component {
         <Link to="/formgrid/grid">Go to FormGrid/grid.html</Link><br/>
         <Link to="/formgrid/trigger">Go to FormGrid/trigger.html</Link><br/>
         <Link to="/formgrid/modal">Go to FormGrid/modal.html</Link><br/>
-
+        <br/>
+        <Link to="/formextend/field">Go to formextend/field.html</Link><br/>
+        <Link to="/formextend/fieldlist">Go to formextend/fieldlist.html</Link><br/>
+        <Link to="/formextend/gridfield">Go to formextend/gridfield.html</Link><br/>
+        <br/>
+        <Link to="/test">Go to test.html</Link><br/>
       </div>
     )
   }

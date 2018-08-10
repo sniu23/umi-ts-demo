@@ -183,7 +183,7 @@ export class GridForm extends React.Component<IFormGridProps> {
             })
           }
         </Row>
-          { children(form) }
+          { children && children(form) }
       </Form>
     )
   }
