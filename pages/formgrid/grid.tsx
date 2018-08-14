@@ -2,7 +2,7 @@ import React from "react";
 import { observable, computed, action } from "mobx";
 import { observer } from "mobx-react";
 import { Radio, Input } from "antd";
-import FormGrid, { IFormGridField } from "../../components/form/FormGrid";
+import FormGrid, { IFormGridField } from "components/form/FormGrid";
 
 declare type FormLayoutHV = 'horizontal' | 'vertical'
 declare type ColNum = 1 | 2 | 3 | 4 | 6 | 8 | 12 | 24 

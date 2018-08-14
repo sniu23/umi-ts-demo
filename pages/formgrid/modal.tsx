@@ -3,7 +3,7 @@ import { observable, computed, action } from "mobx";
 import { observer } from "mobx-react";
 import { Modal, Form, Button, Input, Icon } from "antd";
 import { FormComponentProps } from "antd/lib/form";
-import FormGrid, { IFormGridField, IFormGridProps } from "../../components/form/FormGrid";
+import FormGrid, { IFormGridField, IFormGridProps } from "components/form/FormGrid";
 
 class Config {
   @observable visible:boolean = false

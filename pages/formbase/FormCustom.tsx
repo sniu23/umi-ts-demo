@@ -1,7 +1,7 @@
 import React from "react";
 import {  Button, Input, Icon } from "antd";
-import { FormVertical, FormHorizontal, FormInline, IField } from "../../components/form/formbase";
-import PriceInput from "../../components/price";
+import { FormVertical, FormHorizontal, FormInline, IField } from "components/form/formbase";
+import PriceInput from "components/price";
 
 export default () => {
   const checkPrice = (rule, value, callback) => {

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Link from 'umi/link';
-import styles from './page.css';
+import './style.css';
 
 class index extends React.Component {
   render() {
     return (
-      <div className = {styles.normal}>
+      <div className='normal' >
+        网址列表：
+        <br/>
         <h2> index page </h2><br/>
         <Link to="/todos">Go to todos.html</Link><br/>
         <Link to="/todos2">Go to todos2.html</Link><br/>
@@ -29,7 +31,11 @@ class index extends React.Component {
         <Link to="/formextend/fieldlist">Go to formextend/fieldlist.html</Link><br/>
         <Link to="/formextend/gridfield">Go to formextend/gridfield.html</Link><br/>
         <br/>
-        <Link to="/test">Go to test.html</Link><br/>
+        <Link to="/css">Go to css.html</Link><br/>
+        <br/>
+        <Link to="/select">Go to select.html</Link><br/>
+        <Link to="/select/array">Go to select/array.html</Link><br/>
+        <Link to="/select/complate">Go to select/complate.html</Link><br/>
       </div>
     )
   }

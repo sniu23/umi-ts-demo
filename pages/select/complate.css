@@ -1,0 +1,14 @@
+.complate-demo-dropdown .ant-select-dropdown-menu {
+  max-height: 600px;
+}
+
+.complate-demo-dropdown .ant-select-dropdown-menu-item {
+  padding-left: 16px;
+}
+
+.complate-demo-item-desc {
+ position: absolute;
+ color: #999;
+ right: 10px;
+ font-size: 13px;
+}

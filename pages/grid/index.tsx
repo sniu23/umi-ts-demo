@@ -2,7 +2,6 @@ import React from "react";
 import { observable, computed, action } from "mobx";
 import { observer } from "mobx-react";
 import { Row, Col, Slider } from "antd";
-// import './index.css';
 
 class Config {
   @observable gutters = [8, 16, 24, 32, 40, 48]

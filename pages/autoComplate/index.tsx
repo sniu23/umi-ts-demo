@@ -1,8 +1,7 @@
-import React from "react";
-import { Icon, Input, AutoComplete } from "antd";
-import 'antd/dist/antd.css';
-import style from './index.css';
 
+import React from 'react';
+import { Icon, Input, AutoComplete, Button, Card } from 'antd';
+import './index.css';
 
 const Option = AutoComplete.Option;
 const OptGroup = AutoComplete.OptGroup;
@@ -58,37 +57,37 @@ const options = dataSource.map(group => (
     {group.children.map(opt => (
       <Option key={opt.title} value={opt.title}>
         {opt.title}
-        <span className={style.certainSearchItemCount} >{opt.count} 人 关注</span>
+        <span className="certain-search-item-count">{opt.count} 人 关注</span>
       </Option>
     ))}
   </OptGroup>
 )).concat([
   <Option disabled key="all" >
-    <a className={style.showAll}
+    <a className="show-all"
       href="https://www.google.com/search?q=antd"
       target="_blank"
       rel="noopener noreferrer"
     >
       查看所有结果
     </a>
-  </Option>
+  </Option>,
 ]);
 
 function Complete() {
   return (
-    <div style={{ width: 250 }}>
+    <div className="certain-category-search-wrapper" style={{ width: 250 }}>
       <AutoComplete
-        className={style.certainCategorySearch}
-        dropdownClassName={style.certainCategorySearchDropdown}
+        className="certain-category-search"
+        dropdownClassName="certain-category-search-dropdown"
         dropdownMatchSelectWidth={false}
-        dropdownStyle={{ width: 300}}
+        dropdownStyle={{ width: 300 }}
         size="large"
         style={{ width: '100%' }}
         dataSource={options}
         placeholder="input here"
         optionLabelProp="value"
       >
-        <Input suffix={<Icon type="search" className={style.certainCategoryIcon} />} />
+        <Input suffix={<Icon type="search" className="certain-category-icon" />} />
       </AutoComplete>
     </div>
   );
@@ -96,7 +95,7 @@ function Complete() {
 
 export default () => {
   return (
-    <div id="container" style={{padding: '24px'}} >
+    <div>
       <Complete />
     </div>
   )

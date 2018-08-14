@@ -1,7 +1,7 @@
 
 import React from "react";
 import {  Button, Input, Icon } from "antd";
-import FormGrid, { IFormGridField } from "../../components/form/FormGrid";
+import FormGrid, { IFormGridField } from "components/form/FormGrid";
 
 const fields: Array<IFormGridField> = [
   {

@@ -1,7 +1,7 @@
 import React from "react";
 import {  Button, Input, Icon } from "antd";
-import { FormVertical, FormHorizontal, FormInline, IField } from "../../components/form/formbase";
-import styles from './page.css';
+import { FormVertical, FormHorizontal, FormInline, IField } from "components/form/formbase";
+import './page.css';
 
 export default () => {
   const fields: Array<IField> = [
@@ -23,7 +23,7 @@ export default () => {
   ]
   return (
     <div>
-      <FormHorizontal fields={fields} classForm={styles.hform}  />
+      <FormHorizontal fields={fields} classForm='hform' />
     </div>
   )
 }

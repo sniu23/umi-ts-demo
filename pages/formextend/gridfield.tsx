@@ -2,7 +2,7 @@
 import React from "react";
 import { Form, Input, Button, Row } from 'antd';
 import { FormComponentProps } from "antd/lib/form";
-import { FormGridField, IFieldProps, COLS } from "../../components/form/formextend";
+import { FormGridField, IFieldProps, COLS } from "components/form/formextend";
 
 const fields: Array<IFieldProps> = [
   {

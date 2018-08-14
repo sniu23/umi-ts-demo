@@ -1,6 +1,6 @@
 import React from "react";
 import {  Button, Input, Icon } from "antd";
-import { FormVertical, FormHorizontal, FormInline, IField } from "../../components/form/formbase";
+import { FormVertical, FormHorizontal, FormInline, IField } from "components/form/formbase";
 
 export default () => {
   const fields: Array<IField> = [

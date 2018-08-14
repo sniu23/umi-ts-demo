@@ -1,5 +1,5 @@
 import React from "react";
-import { CompOne, CompTwo } from "../../components/exmany";
+import { CompOne, CompTwo } from "components/exmany";
 
 export default () => {
   return (

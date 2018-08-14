@@ -1,6 +1,6 @@
 import React from "react";
 import {  Button, Input, Icon } from "antd";
-import FormOrigin, { IField } from "../../components/form/formorigin";
+import FormOrigin, { IField } from "components/form/formorigin";
 import { FormProps, FormItemProps, FormComponentProps } from "antd/lib/form";
 
 export default () => {
