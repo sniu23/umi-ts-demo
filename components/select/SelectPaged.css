@@ -1,0 +1,14 @@
+.select-paged-dropdown .ant-select-dropdown-menu {
+  max-height: 800px;
+}
+
+.select-paged-dropdown .ant-select-dropdown-menu-item {
+  padding-left: 16px;
+}
+
+.select-paged-item-desc {
+ position: absolute;
+ color: #999;
+ right: 10px;
+ font-size: 13px;
+}

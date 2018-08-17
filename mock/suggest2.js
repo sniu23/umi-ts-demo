@@ -1,7 +1,8 @@
 
 import { Random, mock } from "mockjs";
 
-const total = Random.integer(1,100);
+const total = Random.integer(5,30);
+const size = 10;
 
 const some = (total, size) => {
   let data = [];
@@ -19,7 +20,7 @@ const some = (total, size) => {
 };
 
 export default {
-  'get /suggest': function(req, res, next) {
-    res.json(some(total, total));
+  'get /suggest2': function(req, res, next) {
+    res.json(some(total, size));
   }
 };
