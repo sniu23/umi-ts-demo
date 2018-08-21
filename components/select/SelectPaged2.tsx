@@ -33,11 +33,14 @@ interface SelectPagedState {
 }
 
 export default class SelectPaged extends React.Component<SelectPagedProps, SelectPagedState> {
-  state: SelectPagedState = {
-    dict: [],
-    total: 0,
-    current: 1,
-    loading: false,
+  constructor(props:SelectPagedProps) {
+    super(props)
+    this.state = {
+      dict: [],
+      total: 0,
+      current: 1,
+      loading: false,
+    }
   }
   handleFocus = async () => {
     this.setState({ loading: true })

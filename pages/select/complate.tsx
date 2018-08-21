@@ -28,7 +28,7 @@ class Store {
 const store = new Store();
 
 store.find().then(() => {
-  console.log('async fn finish.')
+  // console.log('async fn finish.')
 })
 
 const Option = AutoComplete.Option

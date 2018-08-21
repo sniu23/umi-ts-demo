@@ -21,6 +21,9 @@ const some = (total, size) => {
 
 export default {
   'get /suggest2': function(req, res, next) {
-    res.json(some(total, size));
+    res.json({
+      success: true,
+      data: some(total, size),
+    });
   }
 };

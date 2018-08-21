@@ -5,7 +5,7 @@ import SelectPaged from "components/select/SelectPaged2";
 import axios from 'components/axios';
 
 const fetch = async ({v, p}) => {
-  const resp = await axios.get(`suggest2?v=${v}&p=${p}`)
+  const resp = await axios.get(`suggest2Err?v=${v}&p=${p}`)
   return resp.data
 }
 

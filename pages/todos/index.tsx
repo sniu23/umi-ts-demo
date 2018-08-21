@@ -14,9 +14,9 @@ class Todo {
 
 class TodoList {
   constructor() {
-    autorun(() => {
-      console.log(this.report)
-    })
+    // autorun(() => {
+    //   console.log(this.report)
+    // })
   }
   @observable todos: Todo[] = [];
   @computed get complatedTodosCount() {

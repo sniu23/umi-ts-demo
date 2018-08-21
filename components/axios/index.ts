@@ -1,9 +1,12 @@
 import axios from "axios";
 import { notification } from "antd";
+import router from "umi/router";
 // import Cookies from 'js-cookie';
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const service = axios.create({
-  baseURL: process.env.BASE_API,
+  baseURL: isDev ? 'http://localhost:8000' : process.env.BASE_API,
   timeout: 15000,
 })
 
@@ -17,7 +20,7 @@ service.interceptors.request.use(config => {
     description: (error.name + ' $ ' + error.message) || '未知原因！',
     duration: 0,
   })
-  // return Promise.reject(error)
+  return Promise.reject(error)
 })
 
 service.interceptors.response.use(
@@ -29,13 +32,14 @@ service.interceptors.response.use(
         description: respData.message || '未知异常！',
         duration: 0,
       })
+      return Promise.reject(respData.message || '未知异常！')
     }
     return response.data
   },
   error => {
     const code = parseInt(error.response && error.response.status)
     if (code === 401) {
-      // redirect('/system/login')
+      router.push('/system/login')
     } else {
       notification.error({
         message: '服务器发生错误：',
@@ -43,7 +47,7 @@ service.interceptors.response.use(
         duration: 0,
       })
     }
-    // return Promise.reject(error)
+    return Promise.reject(error)
   }
 )
 

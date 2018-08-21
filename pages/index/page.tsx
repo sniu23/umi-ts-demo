@@ -38,6 +38,11 @@ class index extends React.Component {
         <Link to="/select/paged1">Go to select/paged1.html</Link><br/>
         <Link to="/select/paged2">Go to select/paged2.html</Link><br/>
         <Link to="/select/field">Go to select/field.html</Link><br/>
+        <Link to="/select/paged3">Go to select/paged3.html</Link><br/>
+        <br/>
+        <Link to="/layout">Go to layout.html</Link><br/>
+        <br/>
+        <Link to="/layout2">Go to layout2.html</Link><br/>
       </div>
     )
   }

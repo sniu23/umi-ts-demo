@@ -37,7 +37,7 @@ class Store {
 const store = new Store();
 
 store.find().then(() => {
-  console.log('async axios action finish.')
+  // console.log('async axios action finish.')
 })
 
 const Option = AutoComplete.Option
