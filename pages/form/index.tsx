@@ -1,10 +1,10 @@
 
 import React from "react";
-import { Form, Input, Button, Row } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { FormComponentProps } from "antd/lib/form";
-import { FormGridField, IFieldProps, COLS } from "components/form/formextend";
+import { FormFieldList, FieldProps } from "components/form/Field";
 
-const fields: Array<IFieldProps> = [
+const fields: Array<FieldProps> = [
   {
     item: {
       label: '姓名 ',
@@ -27,33 +27,10 @@ const fields: Array<IFieldProps> = [
       rules: [{ required: true, message: 'Please input your Password!' }],
     },
     view: () => { return <Input placeholder="placeholder" /> },
-    times: 2,
-  },{
-    item: {
-      label: '姓名2 ',
-      id: 'username2',
-      required: true,
-    },
-    opts: {
-      initialValue: '',
-      rules: [{ required: true, message: 'Please input your username!' }],
-    },
-    view: () => { return <Input placeholder="placeholder" /> },
-  },{
-    item: {
-      label: '姓名3 ',
-      id: 'username3',
-      required: true,
-    },
-    opts: {
-      initialValue: '',
-      rules: [{ required: true, message: 'Please input your username!' }],
-    },
-    view: () => { return <Input placeholder="placeholder" /> },
   },
 ]
 
-function MyForm(props:FormComponentProps) {
+const MyForm: React.SFC<FormComponentProps> = (props) => {
   const { form } = props
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -67,20 +44,13 @@ function MyForm(props:FormComponentProps) {
     })
   }
   return (
-    <Form layout='vertical' >
-      <Row gutter={8} >
-        {
-          fields.map((field, idx) => {
-            return (
-              <FormGridField key={idx} colCol={COLS.RESP._3.COL} field={field} form={form} />  ///
-            )
-          })
-        }
-      </Row>
+    <Form >
+      <FormFieldList fields={fields} form={form} />
       <Button type="primary" onClick={handleSubmit} > save </Button>
     </Form>
   )
 }
 
 const Page = Form.create()(MyForm)
+
 export default Page

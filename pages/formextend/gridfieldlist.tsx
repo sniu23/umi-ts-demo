@@ -64,14 +64,14 @@ function MyForm(props:FormComponentProps) {
     xxl: 3, 
   }
   
-  const lblCol = {
-    xs: 12,  
-    sm: 12,  
-    md: 12,  
-    lg: 12,  
-    xl: 12,  
-    xxl: 12, 
-  }
+  // const lblCol = {
+  //   xs: 12,  
+  //   sm: 12,  
+  //   md: 12,  
+  //   lg: 12,  
+  //   xl: 12,  
+  //   xxl: 12, 
+  // }
   const { form } = props
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -85,10 +85,10 @@ function MyForm(props:FormComponentProps) {
     })
   }
   return (
-    <Form layout='horizontal' >
-      <Row>
+    <Form layout='vertical' >
+      <Row gutter={8} >
         {
-          FormGridFieldList({ fields, form, colCol, lblCol })
+          FormGridFieldList({ fields, form, colCol })
         }
       </Row>
       <Button type="primary" onClick={handleSubmit} > save </Button>

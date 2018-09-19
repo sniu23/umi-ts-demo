@@ -1,5 +1,6 @@
 {
-  "name": "start",
+  "name": "ui-umi",
+  "description": "使用 umijs + antd + mobx + typescript 制作 ui.",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
